@@ -45,14 +45,16 @@
 <p>The optional Supporter Pack is a one-time (non-consumable) purchase processed by Apple through the App Store; we never see your payment details. The App uses Unity In-App Purchasing to talk to StoreKit and check or restore your purchase ("Restore Purchases" in Settings). Unity may receive purchase transaction information for this purpose; see <a href="https://unity.com/legal/privacy-policy">Unity's Privacy Policy</a>. Apple's terms: <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>.</p>
 
 <h2>Retention</h2>
-<p>Game progress stays on your device until you clear it or delete the App. Firebase Analytics event data is kept by Google for up to 14 months (the project's retention setting) and is aggregated; we hold no other server-side data about you. Advertising data is kept by Google under its own policy.</p>
+<p>Game progress stays on your device until you clear it or delete the App. Firebase Analytics event data is retained by Google for 2 months (Firebase's default event-data retention) and then deleted; we hold no other server-side data about you. Advertising data is kept by Google under its own policy.</p>
 
-<h2>Your choices</h2>
+<h2>Your choices (opt-out)</h2>
 <ul>
-<li><strong>Tracking:</strong> iOS Settings → Privacy &amp; Security → Tracking → switch Pet Café Merge off at any time (and "Allow Apps to Request to Track" off for all apps). You can also reset or limit ad personalisation in iOS Settings → Privacy &amp; Security → Apple Advertising.</li>
-<li><strong>Ads:</strong> watching a rewarded ad is always optional. Owning the Supporter Pack removes all ads and prompts. Deleting the App and reinstalling shows the consent questions again.</li>
-<li><strong>Analytics:</strong> there is currently no in-app analytics switch. To stop it, delete the App or e-mail us and we will tell you how to reset your app-instance data. A consent re-open ("Privacy options") button is not yet in the App; until it is, e-mail us to change a consent decision.</li>
-<li><strong>Your data:</strong> we do not hold personal data that we can look up, export or delete for you. For anything held by Google or Apple, use their privacy controls.</li>
+<li><strong>Anonymous analytics (in the App):</strong> Settings → <em>Anonymous analytics</em> switch. It is on by default; switch it off at any time. When off, the App stops Firebase Analytics collection and stops writing the local log immediately and on every later start. Your choice is saved on your device and also applies to Supporter Pack owners.</li>
+<li><strong>Privacy options (in the App, EU / UK):</strong> where Google's consent rules require it, Settings shows a <em>Privacy options</em> button that reopens Google's consent form so you can change your ad consent at any time. The button does not appear in other regions.</li>
+<li><strong>Tracking (iOS):</strong> iOS Settings → Privacy &amp; Security → Tracking → switch Pet Café Merge off (or switch "Allow Apps to Request to Track" off for all apps). Without permission the App never uses the advertising identifier.</li>
+<li><strong>Advertising ID:</strong> you can reset or limit it in iOS Settings → Privacy &amp; Security → Apple Advertising (turn Personalized Ads off) and, on supported iOS versions, Tracking settings; deleting and reinstalling the App also starts a new app-instance identifier.</li>
+<li><strong>Ads:</strong> watching a rewarded ad is always optional. Owning the Supporter Pack removes all ads and ad prompts.</li>
+<li><strong>Your data:</strong> we do not hold personal data that we can look up, export or delete for you. For data held by Google or Apple, use their privacy controls, or e-mail us and we will help.</li>
 </ul>
 
 <h2>Children's privacy</h2>
@@ -109,14 +111,16 @@
 <p>可选的支持包是一次性（非消耗型）购买，由苹果通过 App Store 处理，我们看不到你的支付信息。本应用通过 Unity In-App Purchasing 与 StoreKit 通信，用于检查和恢复购买（「设置」里的「恢复购买」）。Unity 可能为此收到购买交易信息，详见 <a href="https://unity.com/legal/privacy-policy">Unity 隐私政策</a>。苹果条款：<a href="https://www.apple.com/legal/privacy/zh-cn/">Apple 隐私政策</a>。</p>
 
 <h2>保留期限</h2>
-<p>游戏进度在你清除存档或删除本应用之前一直保存在设备上。Google 对 Firebase Analytics 事件数据最长保留 14 个月（项目的保留设置），并做汇总处理；我们没有其他关于你的服务器端数据。广告数据由 Google 按其自身政策保留。</p>
+<p>游戏进度在你清除存档或删除本应用之前一直保存在设备上。Google 对 Firebase Analytics 事件数据保留 2 个月（Firebase 默认的事件数据保留期），之后删除；我们没有其他关于你的服务器端数据。广告数据由 Google 按其自身政策保留。</p>
 
-<h2>你的选择</h2>
+<h2>你的选择（退出方式）</h2>
 <ul>
-<li><strong>跟踪：</strong>随时在 iOS「设置 → 隐私与安全性 → 跟踪」里关闭 Pet Café Merge（也可关闭「允许 App 请求跟踪」）。还可在「设置 → 隐私与安全性 → Apple 广告」里调整个性化广告。</li>
-<li><strong>广告：</strong>观看激励广告始终是自愿的；拥有支持包即可去除全部广告和相关提示；删除并重装本应用后会再次询问同意。</li>
-<li><strong>统计：</strong>目前应用内没有统计开关。如需停止，请删除本应用，或发邮件给我们，我们会告知如何重置应用实例数据。应用内的「隐私选项」（重新打开同意表单）按钮尚未提供；在此之前，如需更改同意选择请发邮件联系我们。</li>
-<li><strong>你的数据：</strong>我们没有可供查询、导出或删除的个人数据；Google 或苹果持有的数据请使用它们的隐私设置。</li>
+<li><strong>匿名统计（应用内）：</strong>「设置」→「匿名统计」开关，默认开启，可随时关闭。关闭后，本应用立即并在以后每次启动时停止 Firebase Analytics 的数据收集，也不再写入本地日志。你的选择保存在设备上，拥有支持包的玩家同样可用。</li>
+<li><strong>隐私选项（应用内，欧盟 / 英国）：</strong>在 Google 同意规则要求的地区，「设置」里会出现「隐私选项」按钮，可随时重新打开 Google 同意表单修改广告同意；其他地区不会显示该按钮。</li>
+<li><strong>跟踪（iOS）：</strong>iOS「设置 → 隐私与安全性 → 跟踪」里关闭 Pet Café Merge（或关闭「允许 App 请求跟踪」）。未经许可，本应用不会使用广告标识符。</li>
+<li><strong>广告标识符：</strong>可在 iOS「设置 → 隐私与安全性 → Apple 广告」里关闭个性化广告来重置或限制；删除并重装本应用也会生成新的应用实例标识符。</li>
+<li><strong>广告：</strong>观看激励广告始终是自愿的；拥有支持包即可去除全部广告和相关提示。</li>
+<li><strong>你的数据：</strong>我们没有可供查询、导出或删除的个人数据；Google 或苹果持有的数据请使用它们的隐私设置，或发邮件给我们，我们会协助。</li>
 </ul>
 
 <h2>儿童隐私</h2>
