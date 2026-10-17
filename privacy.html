@@ -5,7 +5,7 @@
 
 <section id="en" lang="en">
 <h1>Pet Café Merge – Privacy Policy</h1>
-<p><em>Last updated: October 10, 2026 (version 1.0.3)</em></p>
+<p><em>Last updated: October 18, 2026 (version 1.0.5)</em></p>
 <p>This policy explains how the mobile game Pet Café Merge ("the App") handles information. The App has no user accounts and no servers of ours: your game progress stays on your device. Version 1.0.3 adds optional rewarded ads, an optional in-app purchase and anonymous usage analytics, described below.</p>
 
 <h2>Summary</h2>
@@ -19,6 +19,10 @@
 
 <h2>Data stored on your device</h2>
 <p>Your game progress (levels, items, coins, settings, daily reward and offline tips state, purchase status cache) is saved locally on your device only and we cannot access it. Delete it at any time with "Clear Save" in Settings or by deleting the App. Test (TestFlight / internal) builds additionally keep a small text file <code>analytics.log</code> with the same event names listed below; it stays on the tester's device and is not uploaded.</p>
+
+<h2>Microphone – "Meow to call"</h2>
+<p><strong>Microphone:</strong> if you allow it, the game measures how loud you are for a few seconds when you tap "Call" in the shop, to detect a meow. This happens only on your device. We do not record, store or upload audio and do not use speech recognition. Our analytics only count how often the feature is used and whether the cat heard you.</p>
+<p>The microphone is optional. If you decline access, the same button calls the cat without the microphone. You can turn the feature off in Settings → <em>Meow to call</em>, or turn off microphone access in iOS Settings → Privacy &amp; Security → Microphone.</p>
 
 <h2>Advertising – Google AdMob</h2>
 <p>The App shows <strong>rewarded video ads only</strong> (no banners, no interstitials) using Google AdMob (Google Mobile Ads SDK). An ad is requested only after you tap "Watch ×2" or open a screen that offers it. Before the first ad request:</p>
@@ -38,6 +42,7 @@
 <tr><td>daily_claim, offline_claim</td><td>day (1–7), whether doubled</td></tr>
 <tr><td>iap_view, iap_purchase, iap_cancel, iap_restore, iap_fail</td><td>entry point, reason</td></tr>
 <tr><td>walkin_serve, tutorial_step, shop_buy, cat_treat</td><td>step / item / cat id</td></tr>
+<tr><td>call_cat</td><td>cat id, result (heard, button, button_fallback, timeout, interrupted, cooldown, cap) – no audio, loudness level or text</td></tr>
 </table>
 <p>Firebase also automatically collects technical information such as a random app-instance identifier, device model, operating system and app version, language, and approximate region derived from the IP address. We do not combine it with any name or account, and we do not use it for advertising. See <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a> and <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
 
@@ -71,7 +76,7 @@
 
 <section id="zh" lang="zh-Hans">
 <h1>萌宠咖啡馆（Pet Café Merge）隐私政策</h1>
-<p><em>最后更新：2026 年 10 月 10 日（1.0.3 版）</em></p>
+<p><em>最后更新：2026 年 10 月 18 日（1.0.5 版）</em></p>
 <p>本政策说明手机游戏《Pet Café Merge》（“本应用”）如何处理信息。本应用没有用户账号，也没有我们自己的服务器：你的游戏进度只保存在你的设备上。1.0.3 版新增了可选的激励视频广告、一项可选的应用内购买和匿名的使用统计，详见下文。</p>
 
 <h2>要点</h2>
@@ -85,6 +90,10 @@
 
 <h2>保存在你设备上的数据</h2>
 <p>游戏进度（关卡、物品、金币、设置、每日奖励与离线小费状态、购买状态缓存）只保存在你的设备本地，我们无法访问。你可以随时在「设置」里点「清除存档」或删除本应用来清除。测试版（TestFlight / 内部测试）还会在设备上保留一个文本文件 <code>analytics.log</code>，内容是下表中的同名事件，只留在测试者的设备上，不会上传。</p>
+
+<h2>麦克风 – 声音叫猫</h2>
+<p><strong>麦克风：</strong>如果你允许，在小店里点「叫猫」后的几秒内，游戏会检测你的声音有多大，用来判断你有没有学猫叫。这只在你的设备上进行。我们不录音、不保存、不上传音频，也不使用语音识别。我们的统计只记录这个功能的使用次数，以及猫咪有没有听到你。</p>
+<p>麦克风是可选的。如果你拒绝授权，同一个按钮不用麦克风也能叫猫。你可以在「设置」→「声音叫猫」里关闭这个功能，或在 iOS「设置 → 隐私与安全性 → 麦克风」里关闭本应用的麦克风权限。</p>
 
 <h2>广告 – Google AdMob</h2>
 <p>本应用<strong>只展示激励视频广告</strong>（没有横幅、没有插屏），使用 Google AdMob（Google Mobile Ads SDK）。只有在你点击「看视频 ×2」或打开提供该选项的界面后才会请求广告。首次请求广告前：</p>
@@ -104,6 +113,7 @@
 <tr><td>daily_claim、offline_claim</td><td>第几天（1–7）、是否翻倍</td></tr>
 <tr><td>iap_view、iap_purchase、iap_cancel、iap_restore、iap_fail</td><td>入口、原因</td></tr>
 <tr><td>walkin_serve、tutorial_step、shop_buy、cat_treat</td><td>步骤 / 物品 / 猫咪编号</td></tr>
+<tr><td>call_cat</td><td>猫咪编号、结果（heard 听到、button 按钮、button_fallback 无麦克风改用按钮、timeout 超时、interrupted 被打断、cooldown 冷却中、cap 达到每日上限）——不含音频、音量数值或文字</td></tr>
 </table>
 <p>Firebase 还会自动收集技术信息，如随机的应用实例标识符、设备型号、系统和应用版本、语言，以及根据 IP 推断的大致地区。我们不会把这些信息与任何姓名或账号关联，也不用于广告。详见 <a href="https://firebase.google.com/support/privacy?hl=zh-cn">Firebase 隐私信息</a>和 <a href="https://policies.google.com/privacy?hl=zh-CN">Google 隐私权政策</a>。</p>
 
