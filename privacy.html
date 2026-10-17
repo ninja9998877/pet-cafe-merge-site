@@ -37,12 +37,13 @@
 <table>
 <tr><th>Event</th><th>Parameters</th></tr>
 <tr><td>app_open, session_length</td><td>seconds of the session</td></tr>
-<tr><td>level_start, level_win, level_fail, level_quit</td><td>level number, moves left, stars</td></tr>
+<tr><td>level_start, level_win, level_fail, level_quit</td><td>level number, moves left, stars; level_fail also sends the reason (moves or stuck)</td></tr>
 <tr><td>ad_request, ad_shown, ad_reward, ad_fail, ad_no_fill</td><td>placement (daily or offline reward)</td></tr>
 <tr><td>daily_claim, offline_claim</td><td>day (1–7), whether doubled</td></tr>
 <tr><td>iap_view, iap_purchase, iap_cancel, iap_restore, iap_fail</td><td>entry point, reason</td></tr>
 <tr><td>walkin_serve, tutorial_step, shop_buy, cat_treat</td><td>step / item / cat id</td></tr>
-<tr><td>call_cat</td><td>cat id, result (heard, button, button_fallback, timeout, interrupted, cooldown, cap) – no audio, loudness level or text</td></tr>
+<tr><td>undo_use</td><td>level number, undone action (move, merge, ingredient, discard, sell, add_bean, clear_lowest, walk_in), undo steps left, moves refunded</td></tr>
+<tr><td>call_cat</td><td>cat id (not sent with "cap"), result (heard, button, button_fallback, timeout, interrupted, cooldown, cap) – no audio, loudness level or text</td></tr>
 </table>
 <p>Firebase also automatically collects technical information such as a random app-instance identifier, device model, operating system and app version, language, and approximate region derived from the IP address. We do not combine it with any name or account, and we do not use it for advertising. See <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a> and <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
 
@@ -108,12 +109,13 @@
 <table>
 <tr><th>事件</th><th>参数</th></tr>
 <tr><td>app_open、session_length</td><td>本次使用的秒数</td></tr>
-<tr><td>level_start、level_win、level_fail、level_quit</td><td>关卡号、剩余步数、星级</td></tr>
+<tr><td>level_start、level_win、level_fail、level_quit</td><td>关卡号、剩余步数、星级；level_fail 另带失败原因（moves 步数用完 / stuck 无路可走）</td></tr>
 <tr><td>ad_request、ad_shown、ad_reward、ad_fail、ad_no_fill</td><td>广告位（每日奖励 / 离线小费）</td></tr>
 <tr><td>daily_claim、offline_claim</td><td>第几天（1–7）、是否翻倍</td></tr>
 <tr><td>iap_view、iap_purchase、iap_cancel、iap_restore、iap_fail</td><td>入口、原因</td></tr>
 <tr><td>walkin_serve、tutorial_step、shop_buy、cat_treat</td><td>步骤 / 物品 / 猫咪编号</td></tr>
-<tr><td>call_cat</td><td>猫咪编号、结果（heard 听到、button 按钮、button_fallback 无麦克风改用按钮、timeout 超时、interrupted 被打断、cooldown 冷却中、cap 达到每日上限）——不含音频、音量数值或文字</td></tr>
+<tr><td>undo_use</td><td>关卡号、被撤销的操作（move 移动、merge 合成、ingredient 放食材、discard 丢弃、sell 出售、add_bean 加咖啡豆、clear_lowest 清理最低级、walk_in 散客）、剩余可撤销步数、退回的步数</td></tr>
+<tr><td>call_cat</td><td>猫咪编号（cap 时不发送）、结果（heard 听到、button 按钮、button_fallback 无麦克风改用按钮、timeout 超时、interrupted 被打断、cooldown 冷却中、cap 达到每日上限）——不含音频、音量数值或文字</td></tr>
 </table>
 <p>Firebase 还会自动收集技术信息，如随机的应用实例标识符、设备型号、系统和应用版本、语言，以及根据 IP 推断的大致地区。我们不会把这些信息与任何姓名或账号关联，也不用于广告。详见 <a href="https://firebase.google.com/support/privacy?hl=zh-cn">Firebase 隐私信息</a>和 <a href="https://policies.google.com/privacy?hl=zh-CN">Google 隐私权政策</a>。</p>
 
