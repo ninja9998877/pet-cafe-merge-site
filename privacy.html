@@ -11,7 +11,7 @@
 <ul>
 <li>No account, no sign-in. We do not collect your name, e-mail, phone number, contacts, photos or precise location.</li>
 <li>Optional rewarded video ads (Google AdMob) play only when you tap "Watch ×2". The App asks your permission first (Apple's tracking prompt and, where required, Google's consent form).</li>
-<li>Anonymous usage analytics (Google Firebase Analytics) show us how the game is played, for example which levels are too hard. You can switch it off in Settings.</li>
+<li>Usage analytics (Google Firebase Analytics) show us how the game is played, for example which levels are too hard. You can switch it off in Settings.</li>
 <li>Microphone (optional): only checks how loud you are when you call a cat. Nothing is recorded, saved or uploaded.</li>
 <li>Optional in-app purchases (the Supporter Pack and 6 cosmetic cat outfits) are processed by Apple. We never see your payment details.</li>
 <li>Optional local reminders (tip jar full) are created on your device; nothing is sent to us.</li>
@@ -25,10 +25,12 @@ The microphone is optional. If you decline access, the same button calls the cat
 <h2>Notifications</h2>
 <p>If you tap "Sure" on the in-game card and then allow notifications, the App schedules a local reminder on your device when the tip jar is full (at most one a day, never between 22:00 and 09:00). No push service or notification token is used. Turn it off in iOS Settings → Notifications.</p>
 <h2>Advertising – Google AdMob</h2>
-<p>The App shows rewarded video ads only (no banners, no interstitials) using Google AdMob. An ad is requested only after you tap "Watch ×2" or open a screen that offers it, never at launch. Before the first ad request:
-- <strong>App Tracking Transparency (ATT).</strong> iOS asks whether the App may track you across other companies' apps and websites. The advertising identifier (IDFA) is used only if you allow it. If you choose "Ask App Not to Track", ads still work without the IDFA.
-- <strong>Google User Messaging Platform (UMP).</strong> Where the law requires it (for example the EEA and the UK), Google's consent form is shown, and you can accept or decline personalised ads.
-AdMob and Google may process device and advertising identifiers, IP address (approximate location), ad interactions and diagnostics to deliver, measure and secure ads. See Google's Privacy Policy and "How Google uses information from sites or apps that use our services". We receive no personal data from AdMob.</p>
+<p>The App shows rewarded video ads only (no banners, no interstitials) using Google AdMob. An ad is requested only after you tap "Watch ×2" or open a screen that offers it, never at launch. Before the first ad request:</p>
+<ul>
+<li><strong>App Tracking Transparency (ATT).</strong> iOS asks whether the App may track you across other companies' apps and websites. The advertising identifier (IDFA) is used only if you allow it. If you choose "Ask App Not to Track", ads still work without the IDFA.</li>
+<li><strong>Google User Messaging Platform (UMP).</strong> Where the law requires it (for example the EEA and the UK), Google's consent form is shown, and you can accept or decline personalised ads.</li>
+</ul>
+<p>AdMob and Google may process device and advertising identifiers, IP address (approximate location), ad interactions and diagnostics to deliver, measure and secure ads. See Google's Privacy Policy and "How Google uses information from sites or apps that use our services". We receive no personal data from AdMob.</p>
 <h2>Analytics – Google Firebase Analytics</h2>
 <p>The App uses Firebase Analytics to understand how the game is played. Events contain gameplay information only (no name, account, audio or text):</p>
 <table>
@@ -81,9 +83,9 @@ AdMob and Google may process device and advertising identifiers, IP address (app
 </tr>
 </tbody>
 </table>
-<p>Firebase also automatically collects technical information such as a random app-instance identifier, device model, operating system and app version, language, and approximate region derived from the IP address. We do not combine it with any name or account and do not use it for advertising. See Firebase's privacy information and Google's Privacy Policy.</p>
+<p>Firebase also automatically collects technical information such as a random app-instance identifier, device model, operating system and app version, language, and approximate region derived from the IP address. We do not combine it with any name or account. If you allow tracking in the iOS prompt, the Firebase SDK can also read the advertising identifier (IDFA); we use Firebase only to understand how the game is played, not to show you ads. See Firebase's privacy information and Google's Privacy Policy.</p>
 <h2>In-app purchases – Apple</h2>
-<p>The optional Supporter Pack and the 6 cat outfits (Little Postie, Tiny Detective, Little Artist, Little Lion, Little Firefighter, Bath Time) are one-time, non-consumable purchases processed by Apple through the App Store. Outfits change a cat's looks only. We never receive your card or payment details. Purchases and "Restore Purchases" (in Settings) use Apple's native StoreKit directly. The App does not use Unity IAP or any Unity analytics service, and no purchase data is sent to Unity. Purchase events listed above are sent to Firebase without payment details.</p>
+<p>The optional Supporter Pack and the 6 cat outfits (Little Postie, Tiny Detective, Little Artist, Little Lion, Little Firefighter, Bath Time) are one-time, non-consumable purchases processed by Apple through the App Store. Outfits change a cat's looks only. We never receive your card or payment details. Purchases and "Restore Purchases" (in Settings) go through the Unity In-App Purchasing plugin, which hands the transaction to Apple's StoreKit; payment is handled entirely by Apple. For each purchase, Unity receives purchase event data (product, transaction ID, result) and device information (app bundle ID and version, device model, OS version, language, a Unity installation ID and the iOS vendor identifier IDFV, not the IDFA). See Unity's Privacy Policy. Purchase events listed above are sent to Firebase without payment details.</p>
 <h2>Retention and deletion</h2>
 <ul>
 <li>Game progress stays on your device until you use "Clear Save" or delete the App.</li>
@@ -93,7 +95,7 @@ AdMob and Google may process device and advertising identifiers, IP address (app
 </ul>
 <h2>Your choices</h2>
 <ul>
-<li><strong>Anonymous analytics:</strong> Settings → Anonymous analytics (on by default). When off, the App stops Firebase Analytics collection immediately and on every later start.</li>
+<li><strong>Usage analytics:</strong> Settings → Usage analytics (on by default). When off, the App stops Firebase Analytics collection immediately and on every later start.</li>
 <li><strong>Privacy options (EU / UK):</strong> where Google's rules require it, Settings shows "Privacy options" to reopen the consent form.</li>
 <li><strong>Tracking:</strong> iOS Settings → Privacy &amp; Security → Tracking. Without permission the App never uses the advertising identifier.</li>
 <li><strong>Ads</strong> are always optional; the Supporter Pack removes them.</li>
@@ -114,7 +116,7 @@ AdMob and Google may process device and advertising identifiers, IP address (app
 <ul>
 <li>不需要账号或登录，不收集姓名、邮箱、电话、通讯录、照片或精确位置。</li>
 <li>可选的激励视频广告（Google AdMob）只在你点「看视频 ×2」时播放，事先会征求你的许可（苹果的跟踪授权弹窗，以及法律要求地区的 Google 同意表单）。</li>
-<li>匿名使用统计（Google Firebase Analytics）帮助我们了解游戏怎么被玩，比如哪些关卡太难。可在「设置」里关闭。</li>
+<li>使用统计（Google Firebase Analytics）帮助我们了解游戏怎么被玩，比如哪些关卡太难。可在「设置」里关闭。</li>
 <li>麦克风（可选）：只在你叫猫时检测音量，不录音、不保存、不上传。</li>
 <li>可选的应用内购买（支持包和 6 套猫咪衣服）由苹果处理，我们看不到你的付款信息。</li>
 <li>可选的本地提醒（小费罐满了）只在你的设备上生成，不会发给我们。</li>
@@ -128,15 +130,17 @@ AdMob and Google may process device and advertising identifiers, IP address (app
 <h2>通知</h2>
 <p>如果你在游戏内说明卡上点「好」并允许通知，小费罐存满时本应用会在设备上安排一条本地提醒（每天最多一条，22:00–09:00 不发）。不使用推送服务，也不上传通知令牌。可在 iOS「设置 → 通知」里关闭。</p>
 <h2>广告 – Google AdMob</h2>
-<p>本应用只展示激励视频广告（没有横幅、没有插屏），使用 Google AdMob。只有你点「看视频 ×2」或打开提供该选项的界面后才会请求广告，启动时不会请求。首次请求广告前：
-- <strong>App 跟踪透明度（ATT）。</strong> iOS 会询问是否允许本应用跨其他公司的 App 和网站跟踪你。只有你允许，才会使用广告标识符（IDFA）。选择「要求 App 不跟踪」后广告照样能看，只是不使用 IDFA。
-- <strong>Google 用户消息平台（UMP）。</strong> 在法律要求的地区（如欧洲经济区、英国）会显示 Google 的同意表单，你可以接受或拒绝个性化广告。
-AdMob 与 Google 可能处理设备和广告标识符、IP 地址（大致位置）、广告互动和诊断信息，用于投放、衡量和保护广告安全。详见 Google 隐私权政策。我们不会从 AdMob 收到任何个人数据。</p>
+<p>本应用只展示激励视频广告（没有横幅、没有插屏），使用 Google AdMob。只有你点「看视频 ×2」或打开提供该选项的界面后才会请求广告，启动时不会请求。首次请求广告前：</p>
+<ul>
+<li><strong>App 跟踪透明度（ATT）。</strong> iOS 会询问是否允许本应用跨其他公司的 App 和网站跟踪你。只有你允许，才会使用广告标识符（IDFA）。选择「要求 App 不跟踪」后广告照样能看，只是不使用 IDFA。</li>
+<li><strong>Google 用户消息平台（UMP）。</strong> 在法律要求的地区（如欧洲经济区、英国）会显示 Google 的同意表单，你可以接受或拒绝个性化广告。</li>
+</ul>
+<p>AdMob 与 Google 可能处理设备和广告标识符、IP 地址（大致位置）、广告互动和诊断信息，用于投放、衡量和保护广告安全。详见 Google 隐私权政策。我们不会从 AdMob 收到任何个人数据。</p>
 <h2>使用统计 – Google Firebase Analytics</h2>
 <p>本应用使用 Firebase Analytics 了解游戏的玩法。事件只含游戏信息（不含姓名、账号、音频或文字）：关卡开始 / 过关 / 失败 / 退出（关卡号、剩余步数、星级、失败原因），猫咪技能发动（猫咪编号、技能等级），引导步骤，地图街区与页签，家里点猫、喂零食、叫猫结果（不含音频或音量），换装与衣服购买结果，支持包购买 / 恢复，广告请求与结果，每日奖励与离线小费领取，撤销，存档升级结果，以及 first_open（自动）、app_open 和单次使用时长。完整事件名见英文版表格。
-Firebase 还会自动收集技术信息，例如随机的应用实例标识符、设备型号、系统和应用版本、语言，以及由 IP 推算的大致地区。我们不会把这些信息和任何姓名或账号关联，也不用于广告。详见 Firebase 隐私说明和 Google 隐私权政策。</p>
+Firebase 还会自动收集技术信息，例如随机的应用实例标识符、设备型号、系统和应用版本、语言，以及由 IP 推算的大致地区。我们不会把这些信息和任何姓名或账号关联。如果你在 iOS 弹窗里允许跟踪，Firebase SDK 也能读取广告标识符（IDFA）；我们只用 Firebase 了解游戏怎么被玩，不用它给你投放广告。详见 Firebase 隐私说明和 Google 隐私权政策。</p>
 <h2>应用内购买 – Apple</h2>
-<p>可选的支持包和 6 套猫咪衣服（小邮差、小侦探、小画家、小狮子、小消防员、泡澡时光）都是一次性、非消耗型购买，由苹果通过 App Store 处理。衣服只改变猫咪外观。我们不会收到你的银行卡或付款信息。购买和「恢复购买」（在「设置」里）直接使用苹果原生 StoreKit。本应用不使用 Unity IAP 或任何 Unity 统计服务，不会向 Unity 发送任何购买数据。上表中的购买事件发送到 Firebase 时不含付款信息。</p>
+<p>可选的支持包和 6 套猫咪衣服（小邮差、小侦探、小画家、小狮子、小消防员、泡澡时光）都是一次性、非消耗型购买，由苹果通过 App Store 处理。衣服只改变猫咪外观。我们不会收到你的银行卡或付款信息。购买和「恢复购买」（在「设置」里）通过 Unity 内购插件（Unity IAP）调用苹果 StoreKit 完成，付款全部由苹果处理。每次购买时，Unity 会收到购买事件（商品、交易号、结果）和设备信息（应用包名和版本、设备型号、系统版本、语言、Unity 安装 ID 和 iOS 供应商标识符 IDFV，不含 IDFA）。详见 Unity 隐私政策。上表中的购买事件发送到 Firebase 时不含付款信息。</p>
 <h2>保存期限与删除</h2>
 <ul>
 <li>游戏进度留在你的设备上，直到你「清除存档」或删除本应用。</li>
@@ -146,7 +150,7 @@ Firebase 还会自动收集技术信息，例如随机的应用实例标识符�
 </ul>
 <h2>你的选择</h2>
 <ul>
-<li><strong>匿名统计：</strong>「设置」→「匿名统计」（默认开启）。关闭后，本应用立即并在之后每次启动时停止 Firebase 统计。</li>
+<li><strong>使用统计：</strong>「设置」→「使用统计」（默认开启）。关闭后，本应用立即并在之后每次启动时停止 Firebase 统计。</li>
 <li><strong>隐私选项（欧盟 / 英国）：</strong> 在 Google 规则要求的地区，「设置」里有「隐私选项」，可重新打开同意表单。</li>
 <li><strong>跟踪：</strong> iOS「设置 → 隐私与安全性 → 跟踪」。未经许可，本应用从不使用广告标识符。</li>
 <li><strong>广告</strong>始终可选；支持包会去掉广告。</li>
