@@ -82,12 +82,12 @@ AdMob and Google may process device and advertising identifiers, IP address (app
 </tbody>
 </table>
 <p>Firebase also automatically collects technical information such as a random app-instance identifier, device model, operating system and app version, language, and approximate region derived from the IP address. We do not combine it with any name or account and do not use it for advertising. See Firebase's privacy information and Google's Privacy Policy.</p>
-<h2>In-app purchases – Apple and Unity IAP</h2>
-<p>The optional Supporter Pack and the 6 cat outfits (Little Postie, Tiny Detective, Little Artist, Little Lion, Little Firefighter, Bath Time) are one-time, non-consumable purchases processed by Apple through the App Store. Outfits change a cat's looks only. We never receive your card or payment details. The App uses Unity In-App Purchasing to talk to StoreKit and to check or restore purchases ("Restore Purchases" in Settings); Unity may receive transaction information for this purpose (see Unity's Privacy Policy). Purchase events listed above are sent to Firebase without payment details.</p>
+<h2>In-app purchases – Apple</h2>
+<p>The optional Supporter Pack and the 6 cat outfits (Little Postie, Tiny Detective, Little Artist, Little Lion, Little Firefighter, Bath Time) are one-time, non-consumable purchases processed by Apple through the App Store. Outfits change a cat's looks only. We never receive your card or payment details. Purchases and "Restore Purchases" (in Settings) use Apple's native StoreKit directly. The App does not use Unity IAP or any Unity analytics service, and no purchase data is sent to Unity. Purchase events listed above are sent to Firebase without payment details.</p>
 <h2>Retention and deletion</h2>
 <ul>
 <li>Game progress stays on your device until you use "Clear Save" or delete the App.</li>
-<li>Firebase Analytics event data is kept by Google for TODO: 2 months (confirm console setting) and then deleted. We hold no other server-side data about you.</li>
+<li>Firebase Analytics event data is kept by Google for 2 months and then deleted. Aggregated analytics data may be retained longer. We hold no other server-side data about you.</li>
 <li>Advertising data is kept by Google under its own policy.</li>
 <li>We cannot look up data by person because there are no accounts. To ask about deletion of analytics data linked to your app-instance identifier, e-mail us (see Contact); deleting and reinstalling the App also starts a new identifier.</li>
 </ul>
@@ -135,12 +135,12 @@ AdMob 与 Google 可能处理设备和广告标识符、IP 地址（大致位置
 <h2>使用统计 – Google Firebase Analytics</h2>
 <p>本应用使用 Firebase Analytics 了解游戏的玩法。事件只含游戏信息（不含姓名、账号、音频或文字）：关卡开始 / 过关 / 失败 / 退出（关卡号、剩余步数、星级、失败原因），猫咪技能发动（猫咪编号、技能等级），引导步骤，地图街区与页签，家里点猫、喂零食、叫猫结果（不含音频或音量），换装与衣服购买结果，支持包购买 / 恢复，广告请求与结果，每日奖励与离线小费领取，撤销，存档升级结果，以及 first_open（自动）、app_open 和单次使用时长。完整事件名见英文版表格。
 Firebase 还会自动收集技术信息，例如随机的应用实例标识符、设备型号、系统和应用版本、语言，以及由 IP 推算的大致地区。我们不会把这些信息和任何姓名或账号关联，也不用于广告。详见 Firebase 隐私说明和 Google 隐私权政策。</p>
-<h2>应用内购买 – Apple 与 Unity IAP</h2>
-<p>可选的支持包和 6 套猫咪衣服（小邮差、小侦探、小画家、小狮子、小消防员、泡澡时光）都是一次性、非消耗型购买，由苹果通过 App Store 处理。衣服只改变猫咪外观。我们不会收到你的银行卡或付款信息。本应用通过 Unity In-App Purchasing 与 StoreKit 通信，用于查询和恢复购买（「设置」里的「恢复购买」）；Unity 可能为此收到交易信息（见 Unity 隐私政策）。上表中的购买事件发送到 Firebase 时不含付款信息。</p>
+<h2>应用内购买 – Apple</h2>
+<p>可选的支持包和 6 套猫咪衣服（小邮差、小侦探、小画家、小狮子、小消防员、泡澡时光）都是一次性、非消耗型购买，由苹果通过 App Store 处理。衣服只改变猫咪外观。我们不会收到你的银行卡或付款信息。购买和「恢复购买」（在「设置」里）直接使用苹果原生 StoreKit。本应用不使用 Unity IAP 或任何 Unity 统计服务，不会向 Unity 发送任何购买数据。上表中的购买事件发送到 Firebase 时不含付款信息。</p>
 <h2>保存期限与删除</h2>
 <ul>
 <li>游戏进度留在你的设备上，直到你「清除存档」或删除本应用。</li>
-<li>Firebase 统计事件数据由 Google 保存 TODO：2 个月（待在控制台确认）后删除。我们没有其他关于你的服务器数据。</li>
+<li>Firebase 统计事件数据由 Google 保存 2 个月后删除。汇总分析数据可能保留更长时间。我们没有其他关于你的服务器数据。</li>
 <li>广告数据由 Google 按其政策保存。</li>
 <li>因为没有账号，我们无法按个人查找数据。如需删除与你的应用实例标识符相关的统计数据，请发邮件给我们（见「联系我们」）；删除并重装本应用也会生成新的标识符。</li>
 </ul>
