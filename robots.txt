@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ninja9998877.github.io/pet-cafe-merge-site/sitemap.xml
